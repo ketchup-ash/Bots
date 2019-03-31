@@ -21,15 +21,21 @@ def pressSpace():
     pyautogui.keyUp('space')
 
 def imageGrab():
-    box = (Cordinates.dinosaur[0] + 60, Cordinates.dinosaur[1], Cordinates.dinosaur[0] + 100, Cordinates.dinosaur[1] + 30)
+    box = (
+        Cordinates.dinosaur[0] + 70, Cordinates.dinosaur[1],
+        Cordinates.dinosaur[0] + 110, Cordinates.dinosaur[1] + 30
+        )
     image = ImageGrab.grab(box)
     grayImage = ImageOps.grayscale(image)
     a = array(grayImage.getcolors())
+    print(a.sum())
     return a.sum()
 
 if __name__ == "__main__":
     restartGame()
     while True:
+        pyautogui.keyDown('down')
         if(imageGrab() != 1447):
+            pyautogui.keyUp('down')
             pressSpace()
             time.sleep(0.1)

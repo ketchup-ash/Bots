@@ -3,5 +3,5 @@ import pyautogui
 
 
 
- def Click(cordinates):
-     pyautogui.click()
+def Click(coordinates):
+    pyautogui.click()
