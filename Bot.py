@@ -34,8 +34,6 @@ def imageGrab():
 if __name__ == "__main__":
     restartGame()
     while True:
-        pyautogui.keyDown('down')
         if(imageGrab() != 1447):
-            pyautogui.keyUp('down')
             pressSpace()
             time.sleep(0.1)
