@@ -22,8 +22,8 @@ def pressSpace():
 
 def imageGrab():
     box = (
-        Cordinates.dinosaur[0] + 70, Cordinates.dinosaur[1],
-        Cordinates.dinosaur[0] + 110, Cordinates.dinosaur[1] + 30
+        Cordinates.dinosaur[0] + 80, Cordinates.dinosaur[1],
+        Cordinates.dinosaur[0] + 120, Cordinates.dinosaur[1] + 30
         )
     image = ImageGrab.grab(box)
     grayImage = ImageOps.grayscale(image)
